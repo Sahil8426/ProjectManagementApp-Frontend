@@ -1,0 +1,119 @@
+<div class="container mt-5 mb-5 d-flex justify-content-center">
+  <div class="card px-1 py-4">
+    <div class="card-body">
+      <h6 class="card-title mb-3">Create a Task !</h6>
+
+      <form #form="ngForm" (ngSubmit)="addTask()" >
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="form-group">
+              <!-- <label for="name">Name</label> -->
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Project Name"
+                id="projectName" name="projectName" [(ngModel)]="addTaskRequest.projectName"
+
+               
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="form-group">
+              <div class="input-group">
+                <input
+                  class="form-control"
+                  type="text"
+                  placeholder="Task Name"
+                  id="taskName" name="taskName" [(ngModel)]="addTaskRequest.taskName"
+                 
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="form-group">
+              <div class="input-group">
+                <label for="customRange1" class="form-label"
+                  >Set Priority</label
+                >
+                <input type="range" min="0" max="10" class="form-range" id="customRange1"
+
+                id="priority" name="priority" [(ngModel)]="addTaskRequest.priority"
+                
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="form-group">
+              <div class="input-group">
+                
+                <input
+                  class="form-control"
+                  type="text"
+                  placeholder="Start Date"
+
+                  id="startdate" name="startdate" [(ngModel)]="addTaskRequest.startdate"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="form-group">
+              <div class="input-group">
+                <input
+                  class="form-control"
+                  type="text"
+                  placeholder="End Date"
+
+                  id="enddate" name="enddate" [(ngModel)]="addTaskRequest.enddate"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="form-group">
+              <br />
+              <button type="submit"   class="btn btn-primary confirm-button">
+                &nbsp;Add&nbsp;
+              </button>
+
+              <input
+                class="btn rest btn-danger confirm-button"
+                type="reset"
+                value="Reset"
+              />
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<a [routerLink]="['/viewtasks']" class="viewbtn"><span>View all tasks ➤</span></a>
+
+<script>
+  const inputSlider = document.getElementById("priority");
+
+  inputSlider.oninput = (()=>
+
+  {
+    let val = inputSlider.value;
+  
+  }
+  
+  )
+</script>

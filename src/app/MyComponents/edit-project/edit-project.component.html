@@ -1,0 +1,82 @@
+
+<div class="container mt-5 mb-5 d-flex justify-content-center">
+    <div class="card px-1 py-4">
+        <div class="card-body">
+
+            <img class="taskimg" src="assets/tasklogo.png">
+
+            <br>
+
+            <h6 class="card-title mb-3">Update Project  </h6>
+           
+            <form #form="ngForm" (ngSubmit)="updateproject()"> 
+             <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <!-- <label for="name">Name</label> --> <input class="form-control" type="text" placeholder="Project Name"
+                        id="projectname" name="projectName" [(ngModel)]="projectDetails.projectName"
+
+                        > </div>
+                </div>
+             </div>
+         
+             <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <div class="input-group"> <label for="customRange1" class="form-label">Set Priority</label>
+                          <input type="range" class="form-range" id="customRange1"
+                          id="priority" min="0" max="10" name="priority" [(ngModel)]="projectDetails.priority"
+                          > </div>
+                    </div>
+                </div>
+             </div>
+           
+              <div class="row">
+             <div class="col-sm-12">
+                <div class="form-group">
+                    <div class="input-group"> <input class="form-control" type="text" placeholder="Manager Name"
+                      id="managername" name="ManagerName" [(ngModel)]="projectDetails.managerName"> </div>
+                </div>
+             </div>
+
+             <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <div class="input-group"> <input class="form-control" type="text" placeholder="Start Date"
+                          id="startdate" name="startDate" [(ngModel)]="projectDetails.startdate"> </div>
+                    </div>
+                </div>
+       
+  
+                <div class="row">
+                    <div class="col-sm-12">
+                      <div class="form-group">
+                        <br>
+                        <button class="btn btn-primary confirm-button"> &nbsp;Update&nbsp; </button> 
+      
+                        <input class="btn ret btn-danger confirm-button" type="reset" value="Reset">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                 </form> 
+            
+        </div>
+    </div>
+  </div>
+
+  <a [routerLink]="['/viewprojects']" class="userbtn"><span>Recent Projects</span></a>
+
+  <script>
+    const inputSlider = document.getElementById("priority");
+  
+    inputSlider.oninput = (()=>
+  
+    {
+      let val = inputSlider.value;
+    
+    }
+    
+    )
+  </script>

@@ -1,0 +1,87 @@
+<body>
+    <div class="container mt-5 mb-5 d-flex justify-content-center">
+      <div class="card px-1 py-4">
+        <div class="card-body">
+          <img class="userimg" src="assets/userlogo.png" />
+    
+          <br />
+    
+          <h6 class="card-title mb-3">Edit User</h6>
+    
+          <form #form="ngForm" (ngSubmit)="updateuser()">
+
+
+            <!-- <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Id" id="id" name="id" [(ngModel)]="userDetails.id" readonly />
+                  </div>
+                </div>
+              </div>
+            </div> -->
+    
+          <div class="row">
+            <div class="col-sm-12">
+
+              
+              
+              <div class="form-group">
+                <!-- <label for="name">Name</label> -->
+                <input class="form-control" type="text" placeholder="First Name" id="firstname" name="firstName" [(ngModel)]="userDetails.firstName" />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="form-group">
+                <div class="input-group">
+                  <input class="form-control" type="text" placeholder="Last Name" id="firstname" name="lastName" [(ngModel)]="userDetails.lastName" />
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="form-group">
+                <div class="input-group">
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="Employee ID"
+    
+                    id="firstname" name="employeeID" [(ngModel)]="userDetails.employeeID" readonly
+                  />
+                </div>
+              </div>
+            </div>
+    
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="form-group">
+                  <br />
+                  <button type="submit" onsubmit="show()" class="btn btn-success confirm-button">
+                    &nbsp;Update&nbsp;
+                  </button>
+    
+                  <input
+                    class="btn ret btn-danger confirm-button"
+                    type="reset"
+                    value="Reset"
+                  />
+                </div>
+              </div>
+    
+        
+            </div>
+          </div>
+        </form>
+        </div>
+    
+      </div>
+    </div>
+  
+    <a href="/viewuser" class="userbtn"><span>View all users ➤</span></a>
+    
+  </body>
